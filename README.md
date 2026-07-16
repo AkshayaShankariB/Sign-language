@@ -129,6 +129,65 @@ Sign-language/
 
 ---
 
+## 📸 Project Demonstration
+
+### 1️⃣ Gesture Recognition
+
+The system detects and recognizes individual sign language gestures in real time using **MediaPipe Holistic** and a trained **Random Forest** classifier.
+
+<p align="center">
+  <img src="screenshots/gesture_how.png" width="700" alt="Gesture Recognition">
+</p>
+
+---
+
+### 2️⃣ Sequential Sign Recognition
+
+The recognized gestures are accumulated using **temporal smoothing** to form a continuous sign sequence before sentence generation.
+
+<p align="center">
+  <img src="screenshots/how_you_prediction.png" width="700" alt="Sequential Sign Recognition">
+</p>
+
+---
+
+### 3️⃣ Sentence Generation
+
+The recognized sign sequence is transformed into a grammatically correct English sentence using the **phrase mapping** module.
+
+<p align="center">
+  <img src="screenshots/How_are_you_prediction.png" width="700" alt="Sentence Generation">
+</p>
+
+
+## 🚀 How to Run
+
+1. Clone this repository.
+2. Install the required Python libraries.
+3. Run `dataset.py` to collect sign language data.
+4. Run `training.py` to train the Random Forest model.
+5. Run `prediction.py` to perform real-time sign language recognition.
+
+
+---
+
+## 🔮 Future Improvements
+
+- Replace the Random Forest classifier with CNN-LSTM or Transformer-based models for improved sequential sign recognition.
+- Expand the dataset to support a larger vocabulary of sign language gestures.
+- Implement semantic sentence generation using advanced Natural Language Processing (NLP).
+- Integrate Text-to-Speech (TTS) to convert generated sentences into spoken language.
+- Add multilingual translation support.
+- Improve recognition accuracy under different lighting conditions and backgrounds.
+- Deploy the application as a web or mobile application for better accessibility.
+
+---
+
+## 🙏 Acknowledgements
+
+This project was developed as part of the Artificial Intelligence and Machine Learning curriculum. We thank our faculty members and mentors for their valuable guidance and support throughout the project development process.
+
+---
 
 ## 👥 Team Members
 
