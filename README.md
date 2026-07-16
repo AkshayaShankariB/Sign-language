@@ -1,14 +1,30 @@
-# Sign-to-Sentence: Real-Time Sign Language Recognition and Translation System
+# 🤟 Sign-to-Sentence: Real-Time Sign Language Recognition and Translation System
 
-## Overview
+> 🎓 **Team Mini Project** | Foundation for our ongoing Sign Language Recognition major project
 
-Sign-to-Sentence is an AI-based real-time sign language recognition and translation system designed to bridge the communication gap between the hearing-impaired community and non-sign language users.
-
-The system utilizes computer vision and deep learning techniques to analyze sign language videos, extract meaningful features, recognize continuous sign sequences, and convert them into understandable text sentences.
-
-The proposed approach focuses on vision-based recognition by analyzing hand movements, body posture, and facial expressions to achieve accurate and efficient sign language interpretation without the need for external hardware devices.
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green?logo=opencv)
+![MediaPipe](https://img.shields.io/badge/MediaPipe-Holistic-orange)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-FF6F00?logo=tensorflow)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Random%20Forest-F7931E?logo=scikitlearn)
 
 ---
+
+## 📖 Overview
+
+Sign-to-Sentence is a real-time sign language recognition system developed using **Computer Vision** and **Machine Learning** to help bridge the communication gap between hearing-impaired individuals and non-sign language users.
+
+The system captures live webcam input, extracts **hand**, **pose**, and **facial landmarks** using **MediaPipe Holistic**, predicts sign gestures using a **Random Forest classifier**, and converts recognized signs into meaningful English sentences through a language mapping module.
+
+This project serves as the **foundation for our ongoing major project**, where we are extending the system with continuous sign recognition, deep learning models, and improved natural language generation.
+
+---
+
+## 🎯 Problem Statement
+
+Sign language is one of the primary communication methods for people with hearing and speech impairments. However, many individuals are not familiar with sign language, making everyday communication difficult.
+
+This project aims to reduce this communication gap by recognizing sign language gestures in real time using computer vision and machine learning techniques. The system translates recognized gestures into meaningful English text without requiring wearable sensors or specialized hardware, making it an accessible and cost-effective solution.
 
 ## Objectives
 
