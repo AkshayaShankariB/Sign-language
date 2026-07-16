@@ -26,77 +26,117 @@ Sign language is one of the primary communication methods for people with hearin
 
 This project aims to reduce this communication gap by recognizing sign language gestures in real time using computer vision and machine learning techniques. The system translates recognized gestures into meaningful English text without requiring wearable sensors or specialized hardware, making it an accessible and cost-effective solution.
 
-## Objectives
+---
 
-- Develop a real-time sign language recognition system using artificial intelligence and computer vision.
-- Extract important spatial and temporal features from sign language videos.
-- Recognize continuous sign sequences using deep learning models.
-- Convert recognized signs into meaningful sentences.
-- Provide an accessible communication solution for individuals with hearing and speech impairments.
+## ✨ Key Features
+
+- 📹 Real-time sign language recognition using live webcam input
+- ✋ Hand, face, and pose landmark extraction using **MediaPipe Holistic**
+- 📊 Automatic dataset collection with manual label management
+- 🤖 Machine Learning-based sign prediction using a **Random Forest Classifier**
+- 🎯 Confidence-based prediction filtering for improved accuracy
+- 🔄 Temporal smoothing using a prediction buffer for stable recognition
+- 📝 Sentence generation using predefined phrase mapping
+- 💻 Vision-based solution without wearable sensors or specialized hardware
 
 ---
 
-## Features
+## 🏗️ System Architecture
 
-- Real-time sign language recognition using webcam input
-- Vision-based approach without wearable sensors
-- Hand, pose, and facial landmark extraction
-- Spatiotemporal feature learning for dynamic gestures
-- Deep learning-based sequence recognition
-- Continuous sign sequence processing
-- Text generation from recognized signs
-- Scalable architecture for future speech and multilingual support
-Video Input
-|
-↓
-Frame Extraction
-|
-↓
-Landmark Detection
-(Hand, Pose, Face)
-|
-↓
-Feature Extraction & Normalization
-|
-↓
-Deep Learning Model
-(CNN / LSTM Based Architecture)
-|
-↓
-Sign Sequence Recognition
-|
-↓
-Sentence Generation
-|
-↓
-Text Output
+```text
+                    📹 Webcam Input
+                           │
+                           ▼
+                MediaPipe Holistic Detection
+        ┌──────────────┬──────────────┬──────────────┐
+        ▼              ▼              ▼
+   Hand Landmarks   Pose Landmarks   Face Landmarks
+        └──────────────┴──────────────┘
+                       │
+                       ▼
+             Feature Extraction & Storage
+                       │
+                       ▼
+                CSV Dataset Collection
+                       │
+                       ▼
+          Random Forest Model Training
+                       │
+                       ▼
+             Real-Time Gesture Prediction
+                       │
+                       ▼
+         Confidence Threshold Filtering
+                       │
+                       ▼
+              Temporal Smoothing Buffer
+                       │
+                       ▼
+             Phrase Mapping & Correction
+                       │
+                       ▼
+              English Sentence Output
+```
+
+
+---
+
+## ⚙️ Project Workflow
+
+1. Capture live video from the webcam.
+2. Detect hand, pose, and facial landmarks using MediaPipe Holistic.
+3. Extract landmark coordinates and generate feature vectors.
+4. Store the extracted features in a CSV dataset.
+5. Train a Random Forest classifier using the collected dataset.
+6. Perform real-time gesture prediction from live webcam input.
+7. Apply confidence thresholding and temporal smoothing for stable predictions.
+8. Convert recognized gesture sequences into meaningful English sentences using phrase mapping.
 
 
 ---
 
-## Technologies Used
+## 📂 Project Structure
 
-### Programming Language
-- Python
+```text
+Sign-language/
+│
+├── dataset.py                 # Dataset collection using MediaPipe
+├── training.py                # Random Forest model training
+├── prediction.py              # Real-time sign prediction
+├── dataset/
+│   └── sign_data.csv          # Landmark dataset
+├── sign_language_model.pkl    # Trained model
+├── screenshots/               # Project screenshots
+├── README.md
+└── requirements.txt
+```
 
-### Computer Vision
-- OpenCV
-- MediaPipe
-
-### Deep Learning
-- TensorFlow
-- Keras
-- LSTM Networks
-- CNN-based Feature Extraction
-
-### Data Processing
-- NumPy
-- Pandas
-- Scikit-learn
-
-### Development Tools
-- Visual Studio Code
-- Jupyter Notebook
-- Git & GitHub
 
 ---
+
+## 🛠️ Technologies Used
+
+| Category | Technologies |
+|-----------|--------------|
+| Programming Language | Python |
+| Computer Vision | OpenCV, MediaPipe Holistic |
+| Machine Learning | Scikit-learn (Random Forest Classifier) |
+| Data Processing | NumPy, Pandas |
+| Model Persistence | Joblib |
+| Data Storage | CSV |
+| Development Tools | Visual Studio Code, Git, GitHub |
+
+
+---
+
+
+## 👥 Team Members
+
+This project was developed collaboratively as a team mini project.
+
+- Akshaya Shankari B
+- Dhanya B K
+- Sharanya Rai K
+- Srijanya S R
+
+
